@@ -1,0 +1,355 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Pet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .header-bg {
+            background-color: #6B46C1;
+        }
+        .footer-bg {
+            background-color: #4A2E8A; 
+        }
+        .text-accent {
+            color: #F6AD55;
+        }
+        .btn-primary {
+            background-color: #F6AD55;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #ED8936;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-input {
+            border: 1px solid #CBD5E0;
+            border-radius: 0.375rem;
+            padding: 0.75rem;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 1rem;
+        }
+        .error-message {
+            color: #EF4444;
+            font-size: 0.875rem;
+            margin-top: -0.75rem;
+            margin-bottom: 1rem;
+        }
+       
+        .promo-banner {
+            background-color: #4A2E8A;
+            padding: 1rem 0;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        .promo-banner span {
+            color: #F6AD55; 
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            text-align: center;
+            padding: 1rem;
+            transition: transform 0.2s ease-in-out;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-card img {
+            width: 100%;
+            height: 160px; 
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .price-old {
+            text-decoration: line-through;
+            color: #718096; 
+            font-size: 0.875rem;
+        }
+        .price-new {
+            color: #38A169; 
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+        .discount-badge {
+            background-color: #EF4444; 
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
+
+    <header class="header-bg text-white p-4 shadow-md rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold rounded-md p-2">Mundo Pet</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="hover:text-gray-200 text-lg">Início</a></li>
+                    <li><a href="#servicos" class="hover:text-gray-200 text-lg">Serviços</a></li>
+                    <li><a href="#produtos" class="hover:text-gray-200 text-lg">Produtos</a></li>
+                    <li><a href="#programas" class="hover:text-gray-200 text-lg">Programas</a></li>
+                    <li><a href="#contato" class="hover:text-gray-200 text-lg">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+ 
+    <main class="container mx-auto p-8 flex-grow">
+        <section id="home" class="text-center my-12">
+            <div class="flex justify-center space-x-4">
+                <img src="Img/WhatsApp Image 2025-07-08 at 21.49.24.jpeg" alt="" class="w-1/2 rounded-lg shadow-lg"> 
+                <img src="Img/Comportamento-dos-gatos-conheca-9-particularidades-sobre-eles.jpg" alt="" class="w-1/2 rounded-lg shadow-lg">
+            </div>
+            
+             </section>
+
+        <section id="categorias" class="my-12 py-12 bg-white rounded-lg card-shadow">
+            <h2 class="text-4xl font-bold text-center mb-10 text-accent">Nossas Categorias</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 px-8">
+                <a href="#" class="flex flex-col items-center p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <img src="Img/golden-retriever-1.webp" alt="Ícone Cachorros" class="mb-2">
+                    <span class="text-lg font-medium">Cachorros</span>
+                </a>
+                <a href="#" class="flex flex-col items-center p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <img src="Img/04-09_gato_SITE.jpg" alt="Ícone Gatos" class="mb-2">
+                    <span class="text-lg font-medium">Gatos</span>
+                </a>
+                <a href="#" class="flex flex-col items-center p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <img src="Img/papagaio-verdadeiro.webp" alt="Ícone Pássaros" class="mb-2">
+                    <span class="text-lg font-medium">Pássaros</span>
+                </a>
+                <a href="#" class="flex flex-col items-center p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <img src="Img/FJQKkG2XMAQCBJn-1024x1024.jpg" alt="Ícone Peixes" class="mb-2">
+                    <span class="text-lg font-medium">Peixes</span>
+                </a>
+                <a href="#" class="flex flex-col items-center p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <img src="Img/set-of-home-pets-parrot-rabbit-hamster-dog-fish-and-cat-cute-domestic-animals-flat-illustration-isolated-on-white-background-vector.jpg" alt="Ícone Outros Pets" class="mb-2">
+                    <span class="text-lg font-medium">Outros Pets</span>
+                </a>
+                <a href="#" class="flex flex-col items-center p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <img src="Img/a0eb8a36a49b026c44901fa9936fd640.webp" alt="" class="mb-2">
+                    <span class="text-lg font-medium">Casa & Jardim</span>
+                </a>
+            </div>
+        </section>
+
+          <section id="produtos" class="my-12 py-12 bg-white rounded-lg card-shadow">
+            <h2 class="text-4xl font-bold text-center mb-10 text-accent">Produtos Recomendados para Você</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-8">
+                <article class="product-card">
+                    <img src="Img/16980417-800-auto.webp" alt="">
+                    <p class="text-sm text-gray-600 mb-1">Origem Natural</p>
+                    <h3 class="text-lg font-semibold mb-2">Ração Úmida Origem Natural Tasty Gatos Adultos Carne com Legumes</h3>
+                    <div class="flex items-center justify-center mb-2">
+                        <span class="price-old mr-2">R$ 2,99</span>
+                        <span class="price-new">R$ 2,69</span>
+                    </div>
+                    <span class="discount-badge">-10%</span>
+                    <p class="text-sm text-gray-500">85 g</p>
+                </article>
+                
+                <article class="product-card">
+                    <img src="Img/simparic-20mg-www-hazielpet-com-br11-c6afc65fa002228bac16796971321415-1024-1024.png" alt="">
+                    <p class="text-sm text-gray-600 mb-1">Simparic</p>
+                    <h3 class="text-lg font-semibold mb-2">Antipulgas Simparic 5 a 10kg Cães 20mg</h3>
+                    <div class="flex items-center justify-center mb-2">
+                        <span class="price-old mr-2">R$ 110,90</span>
+                        <span class="price-new">R$ 77,63</span>
+                    </div>
+                    <span class="discount-badge">-30%</span>
+                    <p class="text-sm text-gray-500">1 comprimido</p>
+                </article>
+
+                <article class="product-card">
+                    <img src="Img/13435363.webp" alt="">
+                    <p class="text-sm text-gray-600 mb-1">Pipicat</p>
+                    <h3 class="text-lg font-semibold mb-2">Areia Pipicat Classic para Gatos</h3>
+                    <div class="flex items-center justify-center mb-2">
+                        <span class="price-old mr-2">R$ 17,90</span>
+                        <span class="price-new">R$ 15,90</span>
+                    </div>
+                    <span class="discount-badge">-11%</span>
+                    <p class="text-sm text-gray-500">4 kg</p>
+                </article>
+
+                <article class="product-card">
+                    <img src="Img/7897348203162_3-26005543ae.webp" alt="">
+                    <p class="text-sm text-gray-600 mb-1">Golden</p>
+                    <h3 class="text-lg font-semibold mb-2">Ração Golden Special para Cães Adultos Frango e Carne</h3>
+                    <div class="flex items-center justify-center mb-2">
+                        <span class="price-old mr-2">R$ 149,90</span>
+                        <span class="price-new">R$ 134,91</span>
+                    </div>
+                    <span class="discount-badge">-10%</span>
+                    <p class="text-sm text-gray-500">15 kg</p>
+                </article>
+            </div>
+            <div class="text-center mt-10">
+                
+        
+
+        <section id="servicos" class="my-12 py-12 bg-white rounded-lg card-shadow">
+            <h2 class="text-4xl font-bold text-center mb-10 text-accent">Nossos Serviços</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8">
+                <article class="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-2xl font-semibold mb-3">Banho e Tosa</h3>
+                    <p class="text-gray-700">Deixe seu pet limpinho, cheiroso e com o pelo impecável com nossos profissionais especializados.</p>
+                </article>
+                <article class="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-2xl font-semibold mb-3">Veterinário</h3>
+                    <p class="text-gray-700">Consultas, vacinas e exames para a saúde e bem-estar do seu companheiro, em boas mãos.</p>
+                </article>
+                <article class="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-2xl font-semibold mb-3">Adestramento</h3>
+                    <p class="text-gray-700">Aulas personalizadas para um comportamento equilibrado e feliz do seu pet, com comandos e petiscos.</p>
+                </article>
+                <article class="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-2xl font-semibold mb-3">Hospedagem Pet</h3>
+                    <p class="text-gray-700">Hospedagem segura e divertida em ambiente familiar enquanto você viaja.</p>
+                </article>
+                <article class="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-2xl font-semibold mb-3">Pet Sitter</h3>
+                    <p class="text-gray-700">Um cuidador vai até sua casa para dar todo o carinho e atenção que seu pet precisa.</p>
+                </article>
+                <article class="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-2xl font-semibold mb-3">Dog Walker</h3>
+                    <p class="text-gray-700">Passeios educativos para o seu pet ter mais qualidade de vida e gastar energia.</p>
+                </article>
+                <article class="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-2xl font-semibold mb-3">Creche Pet</h3>
+                    <p class="text-gray-700">Ambiente familiar com muita diversão, socialização e supervisão constante durante o dia.</p>
+                </article>
+                <article class="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-2xl font-semibold mb-3">Adoção</h3>
+                    <p class="text-gray-700">Encontre o novo membro da sua família e transforme uma vida.</p>
+                </article>
+                <article class="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-2xl font-semibold mb-3">Personal Pet</h3>
+                    <p class="text-gray-700">Consultoria gratuita de compras para te ajudar a escolher os melhores produtos para seu pet.</p>
+                </article>
+            </div>
+        </section>
+
+        
+
+        <section id="programas" class="my-12 py-12 bg-gray-50 rounded-lg card-shadow">
+            <h2 class="text-4xl font-bold text-center mb-10 text-accent">Nossos Programas de Benefícios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 max-w-4xl mx-auto">
+                <article class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="text-2xl font-semibold mb-3">Programa Amigo Mundo Pet</h3>
+                    <p class="text-gray-700 mb-4">100% Grátis, fácil e só para amigos! Pontue e economize em suas compras.</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Troca de pontos que vão de R$ 10 a R$ 150</li>
+                        <li>Brindes exclusivos nas lojas físicas</li>
+                        <li>Novas ofertas toda semana</li>
+                    </ul>
+                    
+                </article>
+                <article class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="text-2xl font-semibold mb-3">Compra Programada</h3>
+                    <p class="text-gray-700 mb-4">Programe suas compras recorrentes e garanta a economia e comodidade.</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><span class="font-bold">10% OFF</span> em todas as compras</li>
+                        <li>Pontos em dobro no Programa Amigo Mundo Pet</li>
+                        <li>Totalmente flexível: edite produtos, datas de entrega, pause ou cancele a qualquer momento.</li>
+                        <li>10% OFF em serviços Pet Anjo (parceiros).</li>
+                    </ul>
+                     </article>
+            </div>
+        </section>
+
+        
+
+        <section id="galeria" class="my-12 py-12 bg-white rounded-lg card-shadow">
+            <h2 class="text-4xl font-bold text-center mb-10 text-accent">Nossos Clientes Felizes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8">
+                <img src="Img/shih_tzu_2.jpeg" alt="Shih Tzu feliz" class="rounded-lg shadow-md">
+                <img src="Img/6_cacatua_22643_5_600.jpg" alt="Cacatua colorida" class="rounded-lg shadow-md">
+                <img src="Img/dois-filhotes-de-coelho-petlove.jpg" alt="Dois filhotes de coelho" class="rounded-lg shadow-md">
+                <img src="Img/Halloween-e-gatos-pretos.jpg" alt="Gato preto" class="rounded-lg shadow-md">
+                <img src="Img/pngtree-three-yorkshire-terriers-are-on-a-black-background-picture-image_2879661 (1).jpg" alt="Cachorro brincando" class="rounded-lg shadow-md">
+                <img src="Img/jabuti-960x609.jpg" alt="Jabuti" class="rounded-lg shadow-md">
+            </div>
+            <div class="text-center mt-10">
+                </div>
+        </section>
+
+        
+
+        <section id="sobre" class="my-12 py-12 bg-white rounded-lg card-shadow">
+            <h2 class="text-4xl font-bold text-center mb-10 text-accent">Paixão por Pets, Cuidado e Carinho.</h2>
+            <div class="max-w-3xl mx-auto px-8 text-lg text-gray-700 leading-relaxed">
+              </left>  <p class="mb-4">O Mundo Pet nasceu da paixão incondicional por animais e do desejo de oferecer um local onde seus melhores amigos recebam o cuidado e a atenção que merecem. Há mais de 10 anos, dedicamo-nos a criar um ambiente seguro, divertido e acolhedor para todos os pets. <br>Nossa equipe é formada por profissionais experientes e apaixonados, desde veterinários e adestradores até tosadores e cuidadores, todos comprometidos com o bem-estar e a felicidade do seu companheiro. Acreditamos que cada pet é único e merece um tratamento personalizado.</p>
+                <p>Utilizamos produtos de alta qualidade e técnicas modernas para garantir a saúde, higiene e alegria dos animais que nos são confiados. Venha nos conhecer e faça parte da família Mundo Pet!</p>
+            </div>
+        </section>
+
+        
+        
+        <section id="contato" class="my-12 py-12 bg-white rounded-lg card-shadow">
+            <h2 class="text-4xl font-bold text-center mb-10 text-accent">Faça Seu Cadastro</h2>
+            <div class="max-w-xl mx-auto px-8">
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="nome" class="block text-lg font-medium text-gray-700 mb-2">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" class="form-input" placeholder="Seu nome completo" required minlength="3">
+                        <p id="nomeError" class="error-message hidden">Por favor, insira um nome válido (mínimo 3 caracteres).</p>
+                    </div>
+                    <div>
+                        <label for="telefone" class="block text-lg font-medium text-gray-700 mb-2">Telefone/WhatsApp:</label>
+                        <input type="tel" id="telefone" name="telefone" class="form-input" placeholder="(XX) XXXXX-XXXX" pattern="^\(\d{2}\)\s?\d{4,5}-\d{4}$" required>
+                        <p id="telefoneError" class="error-message hidden">Por favor, insira um telefone válido no formato (XX) XXXXX-XXXX ou (XX) XXXX-XXXX.</p>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-lg font-medium text-gray-700 mb-2">E-mail:</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="seu.email@exemplo.com" required>
+                        <p id="emailError" class="error-message hidden">Por favor, insira um email válido.</p>
+                    </div>
+                    <div>
+                        <label for="tipo_servico" class="block text-lg font-medium text-gray-700 mb-2">Tipo de Serviço:</label>
+                        <select id="tipo_servico" name="tipo_servico" class="form-input" required>
+                            <option value="">Selecione</option>
+                            <option value="banho_tosa">Banho e Tosa</option>
+                            <option value="veterinario">Veterinário</option>
+                            <option value="adestramento">Adestramento</option>
+                            <option value="hospedagem">Hospedagem</option>
+                            <option value="pet_shop">Pet Shop</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        <p id="tipoServicoError" class="error-message hidden">Por favor, selecione um tipo de serviço.</p>
+                    </div>
+                    <div>
+                        <label for="descricao_projeto" class="block text-lg font-medium text-gray-700 mb-2">Descrição do Projeto/Necessidade:</label>
+                        <textarea id="descricao_projeto" name="descricao_projeto" rows="5" class="form-input" placeholder="Descreva o que você precisa..." required minlength="20"></textarea>
+                        <p id="descricaoProjetoError" class="error-message hidden">Por favor, digite uma descrição.
+                    </div>
+                    <button type="submit" class="btn-primary w-full text-xl font-semibold rounded-md">Solicitar Contato</button>
+                    <p id="formSuccess" class="text-green-600 text-center mt-4 hidden">Sua mensagem foi enviada com sucesso!</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+       </body>
+</html>
